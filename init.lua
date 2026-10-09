@@ -418,7 +418,6 @@ do
   }
 
   -- [[ Colorscheme ]]
-  -- Using Neovim's built-in default colorscheme.
   -- If you want to see what colorschemes are available, you can use `:Telescope colorscheme`.
 
   -- Highlight todo, notes, etc in comments
