@@ -419,6 +419,12 @@ do
 
   -- [[ Colorscheme ]]
   -- If you want to see what colorschemes are available, you can use `:Telescope colorscheme`.
+  --
+  -- GitHub theme. See `:help github-nvim-theme` for options.
+  -- Variants: 'github_dark', 'github_dark_default', 'github_dark_dimmed', 'github_light', ...
+  vim.pack.add { gh 'projekt0n/github-nvim-theme' }
+  require('github-theme').setup {}
+  vim.cmd.colorscheme 'github_dark_default'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
