@@ -420,11 +420,12 @@ do
   -- [[ Colorscheme ]]
   -- If you want to see what colorschemes are available, you can use `:Telescope colorscheme`.
   --
-  -- GitHub theme. See `:help github-nvim-theme` for options.
-  -- Variants: 'github_dark', 'github_dark_default', 'github_dark_dimmed', 'github_light', ...
-  vim.pack.add { gh 'projekt0n/github-nvim-theme' }
-  require('github-theme').setup {}
-  vim.cmd.colorscheme 'github_dark_default'
+  -- Use the terminal's own 16-color palette (Ghostty theme) instead of 24-bit colors,
+  -- so nvim always matches the terminal theme.
+  vim.o.termguicolors = false
+  vim.cmd.colorscheme 'default'
+  -- Hide the `~` filler lines after the end of a buffer
+  vim.opt.fillchars:append { eob = ' ' }
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
