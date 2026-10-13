@@ -422,7 +422,7 @@ do
   --
   -- Use the terminal's own 16-color palette (Ghostty theme) instead of 24-bit colors,
   -- so nvim always matches the terminal theme.
-  vim.o.termguicolors = false
+  vim.o.termguicolors = true
   vim.cmd.colorscheme 'default'
   -- Hide the `~` filler lines after the end of a buffer
   vim.opt.fillchars:append { eob = ' ' }
